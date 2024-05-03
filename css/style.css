@@ -287,4 +287,22 @@ main {
     #btn-buscar, #limpar {
         margin: 15px 15px 0px 15px;
     }
+
+    .none {
+        display: none;
+    }
+    
+    .hidden {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(-80%);
+        transition: 0.1s;
+    }
+    
+    .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+        transition: all 2s;
+    }
 }
