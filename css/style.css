@@ -246,3 +246,45 @@ main {
     transform: translateX(0);
     transition: all 2s;
 }
+
+@media (max-width: 720px) {
+    header {
+        background-image: url('../img/simpsons.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 220px;
+    }
+
+    header .list-person {
+        display: none;
+    }
+
+    .topoButton {
+        position: fixed;
+        font-size: 14px;
+        top: 1;
+        bottom: 0;
+        left: 2px;
+        width: 50px;
+        height: 30px;
+        background-color: #FF0000;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        border-radius: 10px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #input-pesquisar {
+        min-width: 80%;
+    }
+
+    #btn-buscar, #limpar {
+        margin: 15px 15px 0px 15px;
+    }
+}
