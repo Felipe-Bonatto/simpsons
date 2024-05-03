@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os Simpsons</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/createCards.js" defer></script>
+    <script src="./js/scrool.js" defer></script>
+
+</head>
+
+<body>
+
+    <header id="header">
+        <div><a href="#title"><button class="list-person"> Lista de Personagens</button></a></div>
+        <a href="#header"><button class="topoButton">Voltar</button></a>
+    </header>
+
+    <h1 id="title">Personagens</h1>
+
+    <div id="div-pesquisar">
+        <input type="text" id="input-pesquisar" placeholder="Nome do personagem">
+        <input type="button" value="Buscar" id="btn-buscar">
+        <input type="button" value="Limpar" id="limpar">
+    </div>
+
+    <main>
+        <div class="container-pesquisa none hidden">
+
+            <div class="card-pesquisa" id="card-pesquisa">
+                <figure class="caixa_imagem">
+                    <img id="img-person" src="">
+                </figure>
+                <h2 class="name-person" id="name-person">
+                    Marge Simpson
+                </h2>
+                <div class="descricao">
+                    <p>Genero: <span id="span-genero"></span></p>
+                    <p>Estado: <span id="span-estado"></span></p>
+                    <p>Ocupação: <span id="span-ocupacao"></span></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container hidden">
+
+            <!-- <div class="cards">
+                <figure class="caixa_imagem">
+                    <img src="">
+                </figure>
+                <h2 class="name-person">
+                    Marge Simpson
+                </h2>
+                <div class="descricao">
+                    <p>Genero: </p>
+                    <p>Estado: </p>
+                    <p>Ocupação: </p>
+                </div>
+            </div> -->
+
+        </div>
+    </main>
+
+</body>
+
+</html>

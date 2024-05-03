@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Platypi", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    /* background-color: rgba(26, 26, 234, 0.712); */
+    background-color: rgba(47, 47, 175, 0.712);
+}
+
+header {
+    background-image: url('../img/simpsons.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 700px;
+    padding: 60px 16% 0 0;
+}
+
+header .list-person{
+    width: 150px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #FF0000;
+    color: #ffffff;
+}
+
+
+header .list-person:hover {
+    background-color: #ffff00;
+    color: #FF0000;
+}
+
+.topoButton {
+    position: fixed;
+    font-size: 18px;
+    top: 1;
+    bottom: 0;
+    right: 0px;
+    width: 70px;
+    height: 35px;
+    background-color: #FF0000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 14px;
+}
+
+.topoButton:hover{
+    background-color: #ffff00;
+    color: #000000;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+#div-pesquisar {
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+#div-pesquisar #input-pesquisar {
+    width: 250px;
+    height: 30px;
+    outline: none;
+    background-color: #d4e0df;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 18px;
+}
+
+#div-pesquisar #input-pesquisar:focus {
+    background-color: #ffff00c0;
+}
+
+
+#div-pesquisar #btn-buscar {
+    width: 85px;
+    color: #ffffff;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(234, 5, 5, 0.93);
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px 0 10px;
+    
+}
+
+#div-pesquisar #btn-buscar:hover {
+    background-color: #ffffff;
+    border: 3px solid rgba(234, 5, 5, 0.93);
+    color: #FF0000; 
+}
+
+#limpar {
+    width: 85px;
+    color: #ffffff;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(234, 5, 5, 0.93);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#limpar:hover {
+    background-color: #ffffff;
+    border: 3px solid rgba(234, 5, 5, 0.93);
+    color: #FF0000; 
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin: 50px;
+}
+
+.cards {
+    width: 240px; /* 230 */
+    height: 330px; /* 330 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #d4e0df;
+    cursor: pointer;
+    overflow: scroll;
+    transition: 0.3s;
+}
+
+.cards:hover {
+    background-color: #ffff00c0;
+    transform: scale(1.04);
+    border: 3px solid #ffffff;
+}
+
+.cards::-webkit-scrollbar{
+    display: none;
+}
+
+.card-pesquisa {
+    width: 240px; /* 230 */
+    height: 330px; /* 330 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #d4e0df;
+    cursor: pointer;
+    overflow: scroll;
+    transition: 0.3s;
+}
+
+.card-pesquisa:hover {
+    background-color: #ffff00c0;
+    transform: scale(1.04);
+    border: 3px solid #ffffff;
+}
+
+.card-pesquisa::-webkit-scrollbar{
+    display: none;
+}
+
+
+.cards figure img {
+    margin-top: 15px;
+    width: 70px;
+    height: 100px;
+}
+
+.cards h2 {
+    font-size: 22px;
+    text-align: center;
+    margin: 10px 0 12px 0;
+}
+
+.card-pesquisa img {
+    margin-top: 15px;
+    width: 70px;
+    height: 100px;
+}
+
+.card-pesquisa h2 {
+    font-size: 22px;
+    text-align: center;
+    margin: 10px 0 12px 0;
+}
+
+.descricao {
+    width: 80%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+    width: 90%;
+}
+
+.container-pesquisa {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 90%;
+}
+
+.none {
+    display: none;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-80%);
+    transition: 0.1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 2s;
+}
