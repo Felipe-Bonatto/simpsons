@@ -13,8 +13,7 @@ html {
 
 body {
     width: 100vw;
-    /* background-color: rgba(26, 26, 234, 0.712); */
-    background-color: rgba(47, 47, 175, 0.712);
+    background-color: #87CEEB;
 }
 
 header {
