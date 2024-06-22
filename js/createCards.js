@@ -31,10 +31,10 @@ const setInfSimpsons = async () => {
 
 
         // adicionando as propriedades
-        divCards.classList.add('cards')
+        divCards.setAttribute('class', 'cards')
         figure.classList.add('caixa_imagem')
         imagem.setAttribute('src', dadosPerson.Imagen)
-        h2namePerson.classList.add('name-person')
+        h2namePerson.setAttribute('class', 'name-person')
         divDescricao.classList.add('descricao')
 
 
@@ -61,56 +61,20 @@ window.addEventListener('load', function () {
 
 
 const pesquisarPerson = async () => {
-    let inputPesquisar = document.getElementById('input-pesquisar')
-    const namePesquisa = document.getElementById('name-person')
-    const imgPerson = document.getElementById('img-person')
-    const spanGenero = document.getElementById('span-genero')
-    const spanEstado = document.getElementById('span-estado')
-    const spanOcupacao = document.getElementById('span-ocupacao')
-    let pesquisaValue = inputPesquisar.value
-
-
-    const container = document.querySelector('.container')
-    const containerPesquisa = document.querySelector('.container-pesquisa')
-
-    const url = "https://apisimpsons.fly.dev/api/personajes?limit=680&page=1"
-    const response = await fetch(url)
-    const dado = await response.json()
-
-    dado.docs.forEach(function (item) {
-        if (pesquisaValue.trim().toUpperCase() === item.Nombre.trim().toUpperCase()) {
-            namePesquisa.innerText = item.Nombre
-            spanGenero.innerText = item.Genero
-            spanEstado.innerText = item.Estado
-            spanOcupacao.innerHTML = item.Ocupacion
-            imgPerson.src = item.Imagen
-            container.classList.add('none')
-            containerPesquisa.classList.remove('none')
-            inputPesquisar.value = ''
-        } else if (pesquisaValue == '') {
-            container.classList.remove('none')
-            containerPesquisa.classList.add('none')
+    const allCards = document.querySelectorAll('.cards')
+    const NamePerson = document.querySelectorAll('.name-person')
+    let inputPesquisa = document.getElementById('input-pesquisar').value.trim().toLowerCase()
+    
+    for (let i = 0; i < allCards.length; i++) {
+        if (!NamePerson[i].innerHTML.toLowerCase().trim().includes(inputPesquisa)) {
+            allCards[i].classList.add('none')
+        }else {
+            allCards[i].classList.remove('none')
         }
-    })
+    }
 }
 
-const btnBuscar = document.getElementById('btn-buscar')
-btnBuscar.addEventListener('click', () => {
+const inputPesquisa = document.getElementById('input-pesquisar')
+inputPesquisa.addEventListener('keyup', () => {
     pesquisarPerson()
-})
-
-
-const limparPesquisa = () => {
-    const container = document.querySelector('.container')
-    const containerPesquisa = document.querySelector('.container-pesquisa')
-    let inputPesquisar = document.getElementById('input-pesquisar')
-    container.classList.remove('none')
-    containerPesquisa.classList.add('none')
-    inputPesquisar.value = ''
-}
-
-
-const clear = document.getElementById('limpar')
-clear.addEventListener('click', () => {
-    limparPesquisa()
 })
