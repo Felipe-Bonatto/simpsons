@@ -81,7 +81,7 @@ h1 {
 }
 
 #div-pesquisar #input-pesquisar {
-    width: 250px;
+    width: 20%;
     height: 30px;
     outline: none;
     background-color: #d4e0df;
@@ -153,25 +153,11 @@ main {
 
 .cards:hover {
     background-color: #ffff00c0;
-    transform: scale(1.04);
-    border: 3px solid #ffffff;
+    box-shadow: 0 0 5px 4px #ffffff95;
 }
 
 .cards::-webkit-scrollbar{
     display: none;
-}
-
-.card-pesquisa {
-    width: 240px; /* 230 */
-    height: 330px; /* 330 */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 40px;
-    background-color: #d4e0df;
-    cursor: pointer;
-    overflow: scroll;
-    transition: 0.3s;
 }
 
 .card-pesquisa:hover {
