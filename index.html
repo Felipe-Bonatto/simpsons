@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Os Simpsons</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="./img/homerSimpson.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./img/homerSimpson.png"
+      type="image/x-icon"
+    />
     <script src="./js/createCards.js" defer></script>
     <script src="./js/scrool.js" defer></script>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header id="header">
-        <div><a href="#title"><button class="list-person"> Lista de Personagens</button></a></div>
-        <a href="#header"><button class="topoButton">Voltar</button></a>
+      <div>
+        <a href="#title"
+          ><button class="list-person">Lista de Personagens</button></a
+        >
+      </div>
+      <a href="#header"><button class="topoButton">Voltar</button></a>
     </header>
 
-    <h1 id="title">Personagens</h1>
-
-    <div id="div-pesquisar">
-        <input type="text" id="input-pesquisar" placeholder="Nome do personagem">
-    </div>
-
     <main>
+      <section class="titulo">
+        <h1 id="title">Personagens</h1>
+      </section>
+      <section id="div-pesquisar">
+        <input
+          type="text"
+          id="input-pesquisar"
+          placeholder="Nome do personagem"
+        />
+      </section>
 
-        <div class="container hidden">
-
-            <!-- Cards dos personagens -->
-
-        </div>
+      <section class="container hidden">
+        <!-- Cards dos personagens -->
+      </section>
     </main>
-
-</body>
-
+  </body>
 </html>

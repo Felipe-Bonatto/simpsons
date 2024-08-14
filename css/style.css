@@ -8,6 +8,7 @@
 }
 
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -31,7 +32,7 @@ header {
 header .list-person {
   width: 150px;
   height: 70px;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 500;
   border: none;
   cursor: pointer;
@@ -47,7 +48,7 @@ header .list-person:hover {
 
 .topoButton {
   position: fixed;
-  font-size: 18px;
+  font-size: 1.8rem;
   top: 1;
   bottom: 0;
   right: 0px;
@@ -58,7 +59,7 @@ header .list-person:hover {
   border: none;
   cursor: pointer;
   font-weight: 600;
-  border-radius: 14px;
+  border-radius: 1.4rem;
 }
 
 .topoButton:hover {
@@ -67,81 +68,46 @@ header .list-person:hover {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 4rem;
   text-align: center;
   color: #ffffff;
-  margin-top: 20px;
 }
 
 #div-pesquisar {
-  margin-top: 25px;
   text-align: center;
   width: 100%;
 }
 
 #div-pesquisar #input-pesquisar {
   width: 25%;
-  height: 30px;
+  height: 3rem;
   outline: none;
   background-color: #d4e0df;
-  border-radius: 10px;
-  font-size: 16px;
-  padding: 18px;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  padding: 1.8rem;
 }
 
 #div-pesquisar #input-pesquisar:focus {
   background-color: #ffff00c0;
 }
 
-#div-pesquisar #btn-buscar {
-  width: 85px;
-  color: #ffffff;
-  height: 35px;
-  border: none;
-  border-radius: 10px;
-  background-color: rgba(234, 5, 5, 0.93);
-  cursor: pointer;
-  font-size: 16px;
-  margin: 0 10px 0 10px;
-}
-
-#div-pesquisar #btn-buscar:hover {
-  background-color: #ffffff;
-  border: 3px solid rgba(234, 5, 5, 0.93);
-  color: #ff0000;
-}
-
-#limpar {
-  width: 85px;
-  color: #ffffff;
-  height: 35px;
-  border: none;
-  border-radius: 10px;
-  background-color: rgba(234, 5, 5, 0.93);
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#limpar:hover {
-  background-color: #ffffff;
-  border: 3px solid rgba(234, 5, 5, 0.93);
-  color: #ff0000;
-}
-
 main {
   display: flex;
-  justify-content: center;
+  flex-flow: column;
+  gap: 3.5rem;
   max-width: 100%;
-  margin: 50px;
+  margin: 3rem;
 }
 
 .cards {
-  width: 240px; /* 230 */
-  height: 330px; /* 330 */
+  width: 24rem; /* 230 */
+  height: 33rem; /* 330 */
   display: flex;
+  padding: 2rem;
   flex-direction: column;
   align-items: center;
-  border-radius: 40px;
+  border-radius: 4rem;
   background-color: #d4e0df;
   cursor: pointer;
   overflow: scroll;
@@ -157,36 +123,21 @@ main {
   display: none;
 }
 
-.card-pesquisa:hover {
-  background-color: #ffff00c0;
-  transform: scale(1.04);
-  border: 3px solid #ffffff;
-}
-
 .card-pesquisa::-webkit-scrollbar {
   display: none;
 }
 
 .cards figure img {
-  margin-top: 15px;
-  width: 70px;
-  height: 100px;
+  width: 7rem;
+  height: 10rem;
+}
+
+.cards p {
+  font-size: 1.6rem;
 }
 
 .cards h2 {
-  font-size: 22px;
-  text-align: center;
-  margin: 10px 0 12px 0;
-}
-
-.card-pesquisa img {
-  margin-top: 15px;
-  width: 70px;
-  height: 100px;
-}
-
-.card-pesquisa h2 {
-  font-size: 22px;
+  font-size: 2.2rem;
   text-align: center;
   margin: 10px 0 12px 0;
 }
@@ -199,14 +150,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 40px;
-  width: 90%;
-}
-
-.container-pesquisa {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
+  gap: 4rem;
   width: 90%;
 }
 
