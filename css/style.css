@@ -105,7 +105,7 @@ main {
   height: 33rem; /* 330 */
   display: flex;
   padding: 2rem;
-  flex-direction: column;
+  flex-flow: column;
   align-items: center;
   border-radius: 4rem;
   background-color: #d4e0df;
@@ -173,6 +173,10 @@ main {
 }
 
 @media (max-width: 720px) {
+  html {
+    font-size: 52%;
+  }
+
   header {
     background-image: url("../img/simpsons.jpg");
     background-size: cover;
@@ -186,7 +190,7 @@ main {
 
   .topoButton {
     position: fixed;
-    font-size: 14px;
+    /* font-size: 14px; */
     top: 1;
     bottom: 0;
     left: 2px;
@@ -207,7 +211,7 @@ main {
   }
 
   #input-pesquisar {
-    min-width: 60%;
+    min-width: 75%;
   }
 
   #btn-buscar,

@@ -1,12 +1,16 @@
-const setInfSimpsons = async () => {
+const getDadosApi = async () => {
   const url = "https://apisimpsons.fly.dev/api/personajes?limit=680&page=1";
 
   // executa a url da api e aguarda (await) o retorno do servidor
-  const response = await fetch(url);
+  const request = await fetch(url);
 
   // convertendo o resultado obtido em formato json
-  const dado = await response.json();
+  const dadosJson = await request.json();
 
+  createCards(dadosJson);
+};
+
+const createCards = async (dado) => {
   let containerEl = document.querySelector(".container");
 
   dado.docs.forEach(function (dadosPerson) {
@@ -52,7 +56,7 @@ const setInfSimpsons = async () => {
 };
 
 window.addEventListener("load", function () {
-  setInfSimpsons();
+  getDadosApi();
 });
 
 const pesquisarPerson = async () => {
